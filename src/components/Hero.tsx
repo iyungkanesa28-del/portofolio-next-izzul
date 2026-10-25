@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-export default function Hero({ nama, tagline }) {
+interface HeroProps {
+    nama: string;
+    tagline: string;
+}
+
+export default function Hero({ nama, tagline }: HeroProps) {
     return (
         <section className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex flex-col md:flex-row items-center gap-6">
             <div className="w-28 h-28 rounded-full overflow-hidden bg-gray-200 border-2 border-red-500 shrink-0 flex items-center justify-center">
